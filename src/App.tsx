@@ -597,6 +597,6 @@ function App() {
       </AnimatePresence>
     </div>
   );
-}
+};
 
 export default App;
