@@ -1061,9 +1061,9 @@ export default function App() {
       </AnimatePresence>
     </div>
   );
-}
+};
 
-function PlayerNode({ player }: { player: Player }) {
+const PlayerNode: React.FC<{ player: Player }> = ({ player }) => {
   return (
     <div className="flex flex-col items-center group cursor-pointer">
       <div className="relative w-16 h-16 flex items-end justify-center">
@@ -1081,9 +1081,9 @@ function PlayerNode({ player }: { player: Player }) {
       </div>
     </div>
   );
-}
+};
 
-function BalanceBar({ label, count, color }: { label: string, count: number, color: string }) {
+const BalanceBar: React.FC<{ label: string; count: number; color: string }> = ({ label, count, color }) => {
   const percentage = (count / 11) * 100;
   return (
     <div>
