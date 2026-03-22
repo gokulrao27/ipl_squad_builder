@@ -364,136 +364,43 @@ export const teams: Team[] = [
 
 export interface Match {
   id: string;
+  matchNumber: number;
   date: string;
+  dateLabel: string;
+  day: string;
   team1: string;
   team2: string;
   venue: string;
+  city: string;
   captain1: string;
   captain2: string;
   avgFirstInningsScore: number;
   batFirstWins: number;
   totalMatches: number;
+  storyline: string;
+  recommendedStrategy: string;
 }
 
 export const schedule: Match[] = [
-  {
-    id: 'm1',
-    date: '2026-03-22',
-    team1: 'csk',
-    team2: 'rcb',
-    venue: 'M. A. Chidambaram Stadium, Chennai',
-    captain1: 'Ruturaj Gaikwad',
-    captain2: 'Virat Kohli',
-    avgFirstInningsScore: 165,
-    batFirstWins: 46,
-    totalMatches: 76,
-  },
-  {
-    id: 'm2',
-    date: '2026-03-23',
-    team1: 'mi',
-    team2: 'dc',
-    venue: 'Wankhede Stadium, Mumbai',
-    captain1: 'Hardik Pandya',
-    captain2: 'KL Rahul',
-    avgFirstInningsScore: 180,
-    batFirstWins: 50,
-    totalMatches: 109,
-  },
-  {
-    id: 'm3',
-    date: '2026-03-24',
-    team1: 'kkr',
-    team2: 'srh',
-    venue: 'Eden Gardens, Kolkata',
-    captain1: 'Ajinkya Rahane',
-    captain2: 'Pat Cummins',
-    avgFirstInningsScore: 175,
-    batFirstWins: 36,
-    totalMatches: 86,
-  },
-  {
-    id: 'm4',
-    date: '2026-03-25',
-    team1: 'rr',
-    team2: 'lsg',
-    venue: 'Sawai Mansingh Stadium, Jaipur',
-    captain1: 'Sanju Samson',
-    captain2: 'Nicholas Pooran',
-    avgFirstInningsScore: 160,
-    batFirstWins: 18,
-    totalMatches: 52,
-  },
-  {
-    id: 'm5',
-    date: '2026-03-26',
-    team1: 'pbks',
-    team2: 'gt',
-    venue: 'PCA Stadium, Mohali',
-    captain1: 'Shreyas Iyer',
-    captain2: 'Shubman Gill',
-    avgFirstInningsScore: 168,
-    batFirstWins: 27,
-    totalMatches: 61,
-  },
-  {
-    id: 'm6',
-    date: '2026-03-27',
-    team1: 'rcb',
-    team2: 'kkr',
-    venue: 'M. Chinnaswamy Stadium, Bengaluru',
-    captain1: 'Virat Kohli',
-    captain2: 'Ajinkya Rahane',
-    avgFirstInningsScore: 185,
-    batFirstWins: 33,
-    totalMatches: 88,
-  },
-  {
-    id: 'm7',
-    date: '2026-03-28',
-    team1: 'dc',
-    team2: 'csk',
-    venue: 'Arun Jaitley Stadium, Delhi',
-    captain1: 'KL Rahul',
-    captain2: 'Ruturaj Gaikwad',
-    avgFirstInningsScore: 165,
-    batFirstWins: 35,
-    totalMatches: 84,
-  },
-  {
-    id: 'm8',
-    date: '2026-03-29',
-    team1: 'srh',
-    team2: 'mi',
-    venue: 'Rajiv Gandhi International Stadium, Hyderabad',
-    captain1: 'Pat Cummins',
-    captain2: 'Hardik Pandya',
-    avgFirstInningsScore: 158,
-    batFirstWins: 31,
-    totalMatches: 71,
-  },
-  {
-    id: 'm9',
-    date: '2026-03-30',
-    team1: 'rr',
-    team2: 'pbks',
-    venue: 'Sawai Mansingh Stadium, Jaipur',
-    captain1: 'Sanju Samson',
-    captain2: 'Shreyas Iyer',
-    avgFirstInningsScore: 162,
-    batFirstWins: 20,
-    totalMatches: 55,
-  },
-  {
-    id: 'm10',
-    date: '2026-03-31',
-    team1: 'lsg',
-    team2: 'gt',
-    venue: 'BRSABV Ekana Cricket Stadium, Lucknow',
-    captain1: 'Nicholas Pooran',
-    captain2: 'Shubman Gill',
-    avgFirstInningsScore: 155,
-    batFirstWins: 15,
-    totalMatches: 30,
-  }
+  { id: 'm1', matchNumber: 1, date: '2026-03-28', dateLabel: '28 Mar', day: 'Saturday', team1: 'rcb', team2: 'srh', venue: 'M. Chinnaswamy Stadium', city: 'Bengaluru', captain1: 'Rajat Patidar', captain2: 'Pat Cummins', avgFirstInningsScore: 188, batFirstWins: 48, totalMatches: 96, storyline: 'Opening night brings explosive top-order power and a high-energy crowd under the lights in Bengaluru.', recommendedStrategy: 'Prioritise boundary hitters and death-over bowlers.' },
+  { id: 'm2', matchNumber: 2, date: '2026-03-29', dateLabel: '29 Mar', day: 'Sunday', team1: 'mi', team2: 'kkr', venue: 'Wankhede Stadium', city: 'Mumbai', captain1: 'Hardik Pandya', captain2: 'Ajinkya Rahane', avgFirstInningsScore: 182, batFirstWins: 45, totalMatches: 118, storyline: 'Mumbai pace and Kolkata spin depth collide in a marquee early-season clash.', recommendedStrategy: 'Use powerplay batting before the ball starts gripping later.' },
+  { id: 'm3', matchNumber: 3, date: '2026-03-30', dateLabel: '30 Mar', day: 'Monday', team1: 'rr', team2: 'csk', venue: 'Barsapara Cricket Stadium', city: 'Guwahati', captain1: 'Riyan Parag', captain2: 'Ruturaj Gaikwad', avgFirstInningsScore: 174, batFirstWins: 51, totalMatches: 19, storyline: 'Royals flair meets CSK control on a surface that can reward clean striking.', recommendedStrategy: 'Value adaptable batters who can shift tempo quickly.' },
+  { id: 'm4', matchNumber: 4, date: '2026-03-31', dateLabel: '31 Mar', day: 'Tuesday', team1: 'pbks', team2: 'gt', venue: 'Maharaja Yadavindra Singh Stadium', city: 'Mullanpur', captain1: 'Shreyas Iyer', captain2: 'Shubman Gill', avgFirstInningsScore: 171, batFirstWins: 52, totalMatches: 14, storyline: 'Punjab and Gujarat bring contrasting batting rhythms into a fresh venue battle.', recommendedStrategy: 'Strong new-ball control can shape the match early.' },
+  { id: 'm5', matchNumber: 5, date: '2026-04-01', dateLabel: '01 Apr', day: 'Wednesday', team1: 'lsg', team2: 'dc', venue: 'BRSABV Ekana Stadium', city: 'Lucknow', captain1: 'Rishabh Pant', captain2: 'Axar Patel', avgFirstInningsScore: 160, batFirstWins: 57, totalMatches: 22, storyline: 'Lucknow hosts a tactical contest where middle-over management could decide everything.', recommendedStrategy: 'Back spinners and calm finishers for a slower track.' },
+  { id: 'm6', matchNumber: 6, date: '2026-04-02', dateLabel: '02 Apr', day: 'Thursday', team1: 'kkr', team2: 'srh', venue: 'Eden Gardens', city: 'Kolkata', captain1: 'Ajinkya Rahane', captain2: 'Pat Cummins', avgFirstInningsScore: 178, batFirstWins: 43, totalMatches: 92, storyline: 'Two aggressive batting units enter one of the league’s most atmospheric grounds.', recommendedStrategy: 'Attack with intent but preserve wickets for the final six overs.' },
+  { id: 'm7', matchNumber: 7, date: '2026-04-03', dateLabel: '03 Apr', day: 'Friday', team1: 'csk', team2: 'pbks', venue: 'M. A. Chidambaram Stadium', city: 'Chennai', captain1: 'Ruturaj Gaikwad', captain2: 'Shreyas Iyer', avgFirstInningsScore: 166, batFirstWins: 59, totalMatches: 79, storyline: 'Chepauk brings spin, patience, and tactical calm to a vibrant southern showdown.', recommendedStrategy: 'Select spin-friendly all-rounders and smart accumulators.' },
+  { id: 'm8', matchNumber: 8, date: '2026-04-04', dateLabel: '04 Apr', day: 'Saturday', team1: 'dc', team2: 'mi', venue: 'Arun Jaitley Stadium', city: 'Delhi', captain1: 'Axar Patel', captain2: 'Hardik Pandya', avgFirstInningsScore: 172, batFirstWins: 41, totalMatches: 88, storyline: 'Delhi’s compact boundaries invite a six-hitting race between stacked batting groups.', recommendedStrategy: 'Favour aggressive top-order picks and yorker specialists.' },
+  { id: 'm9', matchNumber: 9, date: '2026-04-04', dateLabel: '04 Apr', day: 'Saturday', team1: 'gt', team2: 'rr', venue: 'Narendra Modi Stadium', city: 'Ahmedabad', captain1: 'Shubman Gill', captain2: 'Riyan Parag', avgFirstInningsScore: 177, batFirstWins: 47, totalMatches: 39, storyline: 'Night conditions in Ahmedabad can turn this into a high-class chase or a defending masterclass.', recommendedStrategy: 'Keep flexibility for dew and death-over execution.' },
+  { id: 'm10', matchNumber: 10, date: '2026-04-05', dateLabel: '05 Apr', day: 'Sunday', team1: 'srh', team2: 'lsg', venue: 'Rajiv Gandhi International Stadium', city: 'Hyderabad', captain1: 'Pat Cummins', captain2: 'Rishabh Pant', avgFirstInningsScore: 201, batFirstWins: 38, totalMatches: 76, storyline: 'A possible run-fest awaits as Hyderabad’s explosive style meets Lucknow’s big hitters.', recommendedStrategy: 'Lean into premium hitters and wicket-takers at the death.' },
+  { id: 'm11', matchNumber: 11, date: '2026-04-05', dateLabel: '05 Apr', day: 'Sunday', team1: 'rcb', team2: 'csk', venue: 'M. Chinnaswamy Stadium', city: 'Bengaluru', captain1: 'Rajat Patidar', captain2: 'Ruturaj Gaikwad', avgFirstInningsScore: 189, batFirstWins: 46, totalMatches: 96, storyline: 'One of the competition’s glamour contests returns with noise, emotion, and star quality.', recommendedStrategy: 'Target batters who maximise short boundaries and pace changes.' },
+  { id: 'm12', matchNumber: 12, date: '2026-04-06', dateLabel: '06 Apr', day: 'Monday', team1: 'kkr', team2: 'pbks', venue: 'Eden Gardens', city: 'Kolkata', captain1: 'Ajinkya Rahane', captain2: 'Shreyas Iyer', avgFirstInningsScore: 178, batFirstWins: 43, totalMatches: 92, storyline: 'Kolkata welcomes another matchup loaded with spin options and fearless finishing power.', recommendedStrategy: 'Balance mystery spin with boundary hitters in the middle order.' },
+  { id: 'm13', matchNumber: 13, date: '2026-04-07', dateLabel: '07 Apr', day: 'Tuesday', team1: 'rr', team2: 'mi', venue: 'Barsapara Cricket Stadium', city: 'Guwahati', captain1: 'Riyan Parag', captain2: 'Hardik Pandya', avgFirstInningsScore: 174, batFirstWins: 51, totalMatches: 19, storyline: 'Royals elegance meets Mumbai power in another attacking fixture at Guwahati.', recommendedStrategy: 'Stack all-rounders who impact both innings.' },
+  { id: 'm14', matchNumber: 14, date: '2026-04-08', dateLabel: '08 Apr', day: 'Wednesday', team1: 'dc', team2: 'gt', venue: 'Arun Jaitley Stadium', city: 'Delhi', captain1: 'Axar Patel', captain2: 'Shubman Gill', avgFirstInningsScore: 172, batFirstWins: 41, totalMatches: 88, storyline: 'Delhi and Gujarat square off in a fixture where anchor batting could prove decisive.', recommendedStrategy: 'Mix stabilisers with late-innings acceleration options.' },
+  { id: 'm15', matchNumber: 15, date: '2026-04-09', dateLabel: '09 Apr', day: 'Thursday', team1: 'kkr', team2: 'lsg', venue: 'Eden Gardens', city: 'Kolkata', captain1: 'Ajinkya Rahane', captain2: 'Rishabh Pant', avgFirstInningsScore: 178, batFirstWins: 43, totalMatches: 92, storyline: 'A contest of momentum swings, with both teams capable of brutal finishing bursts.', recommendedStrategy: 'Preserve batting depth and keep one wicket-taking spinner in play.' },
+  { id: 'm16', matchNumber: 16, date: '2026-04-10', dateLabel: '10 Apr', day: 'Friday', team1: 'rr', team2: 'rcb', venue: 'Barsapara Cricket Stadium', city: 'Guwahati', captain1: 'Riyan Parag', captain2: 'Rajat Patidar', avgFirstInningsScore: 174, batFirstWins: 51, totalMatches: 19, storyline: 'Style, strokeplay, and pressure chases define this Friday-night crossfire.', recommendedStrategy: 'Support adaptable opening pairs and back-end pace options.' },
+  { id: 'm17', matchNumber: 17, date: '2026-04-11', dateLabel: '11 Apr', day: 'Saturday', team1: 'pbks', team2: 'srh', venue: 'Maharaja Yadavindra Singh Stadium', city: 'Mullanpur', captain1: 'Shreyas Iyer', captain2: 'Pat Cummins', avgFirstInningsScore: 171, batFirstWins: 52, totalMatches: 14, storyline: 'Explosive strikers from both dugouts make this a genuine festival fixture.', recommendedStrategy: 'Double down on attacking top-order players with finishing cover.' },
+  { id: 'm18', matchNumber: 18, date: '2026-04-11', dateLabel: '11 Apr', day: 'Saturday', team1: 'csk', team2: 'dc', venue: 'M. A. Chidambaram Stadium', city: 'Chennai', captain1: 'Ruturaj Gaikwad', captain2: 'Axar Patel', avgFirstInningsScore: 166, batFirstWins: 59, totalMatches: 79, storyline: 'Chennai hosts a technical battle featuring spin control and calculated batting phases.', recommendedStrategy: 'Pick wicket-keepers and spin-bowling all-rounders with game sense.' },
+  { id: 'm19', matchNumber: 19, date: '2026-04-12', dateLabel: '12 Apr', day: 'Sunday', team1: 'lsg', team2: 'gt', venue: 'BRSABV Ekana Stadium', city: 'Lucknow', captain1: 'Rishabh Pant', captain2: 'Shubman Gill', avgFirstInningsScore: 160, batFirstWins: 57, totalMatches: 22, storyline: 'Lucknow’s measured conditions bring game awareness and composure to the front.', recommendedStrategy: 'Choose bowlers who can hit hard lengths and batters who rotate strike.' },
+  { id: 'm20', matchNumber: 20, date: '2026-04-12', dateLabel: '12 Apr', day: 'Sunday', team1: 'mi', team2: 'rcb', venue: 'Wankhede Stadium', city: 'Mumbai', captain1: 'Hardik Pandya', captain2: 'Rajat Patidar', avgFirstInningsScore: 182, batFirstWins: 45, totalMatches: 118, storyline: 'A premium Sunday blockbuster closes this fixture list with superstar batting narratives.', recommendedStrategy: 'Target powerplay dominance and finishers who thrive under lights.' },
 ];
+
